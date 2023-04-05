@@ -60,13 +60,17 @@ int main() {
 
         // print the current list
         printList(&list);
+
         // prompt user to continue
-        std::cout << "\nAgain (N/n)? ";
+        std::cout << "\nJust press enter to update the list, otherwise enter 'N'";
+        std::cout << "\nAgain? ";
         std::cin.get(again);
         std::cout << std::endl;
     } while(again != 'N' && again != 'n');
     return 0; // return success to OS
 } // main
+
+
 /**
  * Append a random number to the end of the list
  * @param list -- pointer to a list ADT
@@ -78,6 +82,8 @@ void appendList(List* list) {
     std::cout << "Appended " << value << " at " << list->getSize() - 1 <<
               std::endl;
 }
+
+
 /**
  * Insert a random number at a random position
  * @param list -- pointer to a list ADT
@@ -95,6 +101,8 @@ void insertList(List* list) {
     }
     std::cout << "Inserted " << value << " at " << position << std::endl;
 } // insertList
+
+
 /**
  * Update a random list position with a new random number
  * @param list -- pointer to a list ADT
@@ -111,6 +119,8 @@ void updateList(List* list) {
         std::cout << "Updated " << value << " at " << position << std::endl;
     }
 } // updateList
+
+
 /**
  * Delete 1 value at a random position in the list
  * @param list -- pointer to a list ADT
@@ -125,6 +135,8 @@ void deleteList(List* list) {
         std::cout << "Deleted " << value << " from " << position << std::endl;
     }
 } // deleteList
+
+
 /**
  * Print the current list to the console
  * @param list -- pointer to a list ADT
