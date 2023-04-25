@@ -4,10 +4,13 @@
 // Desc : Implement a Linked List ADT by randomly calling
 //        list operations with random values
 // --------------------------------------------------------
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
 #include "List.h"
+#include<cstring>
+#include<iomanip>
+#include<istream>
 // --------------------------------------------------------
 
 
@@ -35,12 +38,16 @@ void printList(List* list);
 // --------------------------------------------------------
 
 
+//Macro definitions
+//---------------------------------------------------------
+#define MAX_LEN 60 // Maximum length of char that can be entered
+
 
 // Function Definitions
 // --------------------------------------------------------
 int main() {
     List list; // the one and only List
-    char again; // user choice to continue
+    char again[MAX_LEN]; // user choice to continue
     do {
         srand(time(NULL));  // refresh random numbers
         // random list operations
@@ -66,12 +73,12 @@ int main() {
         // prompt user to continue
         std::cout << "\nJust press enter to update the list, otherwise enter 'N'";
         std::cout << "\nAgain? ";
-        std::cin.get(again);
+        //std::cin.get(again);
+        std::cin.getline(again, MAX_LEN);
         std::cout << std::endl;
-    } while(again != 'N' && again != 'n');
+    } while(again[0] != 'N' && again[0] != 'n');
     return 0; // return success to OS
 } // main
-
 
 /**
  * Append a random number to the end of the list
