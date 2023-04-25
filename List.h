@@ -26,9 +26,7 @@ private:
 
 
 public:
-
     List();
-
 
     ~List(); //destructor
 

@@ -73,7 +73,7 @@ int main() {
         // prompt user to continue
         std::cout << "\nJust press enter to update the list, otherwise enter 'N'";
         std::cout << "\nAgain? ";
-        //std::cin.get(again);
+        //std::cin.get(again); (Taken off for security issues)
         std::cin.getline(again, MAX_LEN);
         std::cout << std::endl;
     } while(again[0] != 'N' && again[0] != 'n');
