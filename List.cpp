@@ -17,8 +17,7 @@ List::List() // List:: is scope operator
 /**
  * Destructor - clean up nodes
  */
-List::~List() {
-} // destructor
+List::~List() = default; // destructor
 
 
 /**
