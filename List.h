@@ -13,6 +13,7 @@ const int LIST_HEAD = 0;
 const int LIST_TAIL = -1;
 
 
+
 class List {
 private:
 
@@ -31,8 +32,8 @@ public:
     ~List(); //destructor
 
 
-    int getSize();
-    bool isEmpty();
+    int getSize() const;
+    bool isEmpty() const;
 
 
     void insert(int value, int position=LIST_TAIL); //=List_tail is a default value

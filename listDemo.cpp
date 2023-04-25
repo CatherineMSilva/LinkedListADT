@@ -8,8 +8,6 @@
 #include<cstdlib>
 #include<ctime>
 #include "List.h"
-#include<cstring>
-#include<iomanip>
 #include<istream>
 // --------------------------------------------------------
 
@@ -60,10 +58,10 @@ int main() {
                 insertList(&list);
                 break;
             case LIST_UPDATE:
-                //updateList(&list);
+                updateList(&list);
                 break;
             case LIST_DELETE:
-                //deleteList(&list);
+                deleteList(&list);
                 break;
         }
 

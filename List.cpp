@@ -17,14 +17,22 @@ List::List() // List:: is scope operator
 /**
  * Destructor - clean up nodes
  */
-List::~List() = default; // destructor
+List::~List(){
+    Node* pNode = head;
+    while(pNode){
+        pNode = pNode->next;
+        delete pNode;
+        pNode = pNode->next;
+    }
+
+} // destructor
 
 
 /**
  * Accessor for the list size property
  * @return int size (empty = 0)
  */
-int List::getSize() {
+int List::getSize() const{
     return size;
 
 } // getSize
@@ -34,7 +42,7 @@ int List::getSize() {
  * Signifies if the list is empty or not
  * @return bool True if empty (size==0)
  */
-bool List::isEmpty() {
+bool List::isEmpty() const{
     return size == 0;
 
 } // isEmpty
